@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">............</string>
+    <string name="app_name">Australian Post Code Search</string>
+    <string name="regionText">Please enter a region:</string>
+    <string name="codeText">Or enter a post code for reverse lookup:</string>
+    <string-array name="autocomplete_region">
+        <item>here</item>
+        <item>there</item>
+        <item>nowhere</item>
+        <item>nowhere VIC</item>
+        <item>nowhere NSW</item>
+        <item>nowhere with a long name VIC</item>
+        <item>nowhere with a long name SA</item>
+        <item>nowhere again</item>
+        <item>nowhere now</item>
+        <item>nowhere with an incredibly long name VIC</item>
+        <item>nowhere with a long name that is amazingly lo9ng ... SA</item>
+        <item>nowhere again</item>
+        <item>nowhere now</item>
+        <item>nowhere else</item>
+        <item>nowhere</item>
+        <item>here</item>
+        <item>there</item>
+        <item>nowhere</item>
+        <item>nowhere VIC</item>
+        <item>nowhere NSW</item>
+    </string-array>
+    <string-array name="autocomplete_code">
+        <item>3150</item>
+        <item>3150</item>
+        <item>5150</item>
+        <item>5150</item>
+        <item>6150</item>
+        <item>5150</item>
+        <item>5154</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>5154</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>3150</item>
+        <item>3150</item>
+        <item>6150</item>
+        <item>6150</item>
+        <item>6150</item>
+    </string-array>
+    <string name="region_hint">Search suburbs. e.g. Nowhere VIC</string>
+</resources>
