@@ -48,5 +48,5 @@
         <item>6150</item>
         <item>6150</item>
     </string-array>
-    <string name="region_hint">Search suburbs. e.g. Nowhere VIC</string>
+    <string name="region_hint">Search suburbs. e.g. Nowhere VIC</string><string name="code_hint">Search by post code. e.g: 3150</string>
 </resources>

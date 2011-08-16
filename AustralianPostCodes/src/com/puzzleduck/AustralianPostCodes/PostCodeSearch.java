@@ -13,12 +13,9 @@ public class PostCodeSearch extends Activity {
     /** Called when the activity is first created. */
 	private RegionClickListener aRegionClickListener = new RegionClickListener();
 	
-	
 	static AutoCompleteTextView regionTextView;
 	static AutoCompleteTextView codeTextView;
 
-
-	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +33,7 @@ public class PostCodeSearch extends Activity {
         
         regionTextView = (AutoCompleteTextView) findViewById(R.id.autoCompleteRegion);
         codeTextView = (AutoCompleteTextView) findViewById(R.id.autoCompleteCode);
-        
+        regionTextView.setHint(R.string.region_hint);
        // reduce threshhold & color
         ((AutoCompleteTextView) findViewById(R.id.autoCompleteRegion)).setThreshold(1);// zero seems to have no effect
         ((AutoCompleteTextView) findViewById(R.id.autoCompleteCode)).setThreshold(1);// zero seems to have no effect
@@ -59,7 +56,9 @@ public class PostCodeSearch extends Activity {
         codeTextView.setAdapter(codeAdapter);
 
         
-    }
+    }//if
+        
+    }//onCreate
 
 //	@Override //(AdapterView<?> parent, View view, int position, long id)
 //	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

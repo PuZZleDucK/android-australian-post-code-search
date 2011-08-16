@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 public class PostCodeHelper extends SQLiteOpenHelper{
 
@@ -25,16 +26,36 @@ public class PostCodeHelper extends SQLiteOpenHelper{
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String queryString = "create table " + DB_TABLE + " ( "
-			+ DB_COL_ID + " INT, "
-			+ DB_COL_NAME + " TEXT, "
-			+ DB_COL_CODE + " TEXT, "
+			+ DB_COL_ID + " INT PRIMARY KEY ASC, " //SUPPLY null to use ascending key :)
+			+ DB_COL_NAME + " TEXT FOREIGN KEY, "
+			+ DB_COL_CODE + " TEXT FOREIGN KEY, "
 			+ DB_COL_STATE + " TEXT );";
+		Log.d("PZD_TAG:: "," SQL created: " + queryString);
+		
+		db.execSQL(queryString);
+		Log.d("PZD_TAG:: "," SQL executed");
+		
+		//TODO: populate DB... from xml? txt?
 		
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
+		Log.d("PZD_TAG:: "," Post Code Helper ... UPGRADE!");
+		if(oldVersion < newVersion)
+		{
+			switch(oldVersion)
+			{
+			case(1):
+				// TODO: no updates... no changes yet
+				break;
+			default:
+				// hopefully no one ever gets here
+				break;
+					
+			}
+			
+		}
 		
 	}
 
